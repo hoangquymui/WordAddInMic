@@ -1,0 +1,43 @@
+# Build and distribution
+build/
+dist/
+Output/
+bin/
+obj/
+
+# Executables & Packages
+*.exe
+*.msi
+*.dll
+*.pyd
+
+# AI Models & Large Weights (models > 100MB exceed GitHub limit)
+*.onnx
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.spec.bak
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Logs & Runtime data
+*.log
+runtime/
+
+# SSL Certificates (generated locally at runtime)
+*.crt
+*.key
+*.pem
+
+# IDE & OS temporary files
+.vscode/
+.idea/
+.vs/
+Thumbs.db
+Desktop.ini
+.DS_Store

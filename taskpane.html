@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STT-Word-H2M</title>
+    <script src="office-js/office.js"></script>
+    <link rel="stylesheet" href="taskpane.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <div class="header">
+        <span class="header-icon">&#127897;</span>
+        <div class="header-text">
+          <h1>STT-Word-H2M</h1>
+          <p>Nhận dạng giọng nói tiếng Việt</p>
+        </div>
+      </div>
+
+      <!-- STATUS BAR -->
+      <div id="statusBar" class="status-bar status-idle">
+        <span id="statusDot" class="status-dot"></span>
+        <span id="statusText">Chưa kết nối server</span>
+      </div>
+
+
+
+      <!-- MIC BUTTON -->
+      <div class="mic-section">
+        <button id="micBtn" class="mic-btn" onclick="toggleMic()">
+          <span class="mic-icon">&#127897;</span>
+          <span id="micLabel">Bắt đầu nói</span>
+        </button>
+      </div>
+
+      <!-- PREVIEW REALTIME -->
+      <div class="preview-section">
+        <div class="label-row">
+          <label class="label">Văn bản đang nhận</label>
+          <span id="liveIndicator" class="hidden live-indicator"
+            >&#9679; LIVE</span
+          >
+        </div>
+        <div id="previewBox" class="preview-box">
+          <span class="preview-placeholder"
+            >Văn bản tự động hiện ở đây khi nói...</span
+          >
+        </div>
+      </div>
+
+      <!-- COMMITTED TEXT -->
+      <div class="committed-section">
+        <div class="label-row">
+          <label class="label">Đã chèn vào Word</label>
+          <button class="clear-btn" onclick="clearCommitted()">Xóa</button>
+        </div>
+        <div id="committedBox" class="committed-box"></div>
+      </div>
+
+      <!-- OPTIONS -->
+      <div class="options-section">
+        <label class="checkbox-label">
+          <input type="checkbox" id="insertSpace" checked />
+          Tự động thêm dấu cách giữa các câu
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="insertNewline" />
+          Xuống dòng mỗi khi có câu mới
+        </label>
+      </div>
+    </div>
+
+    <script src="taskpane.js"></script>
+  </body>
+</html>
